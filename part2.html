@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="styles/part2.css">
+</head>
+
+<body>
+    <p id="output"></p>
+    <p id="row1">
+        <button onclick="calculation = calculation.slice(0,-1);
+        document.getElementById('output').innerHTML = calculation;
+        if (calculation === '') {
+            console.log(null);
+        }
+        console.log(calculation)">C</button>
+        <button onclick="calculation='';
+        document.getElementById('output').innerHTML = calculation;
+        console.log(null);">AC</button>
+        <button onclick="eval(calculation);
+        calculation = eval(calculation);
+        document.getElementById('output').innerHTML = eval(calculation)+'';
+        console.log(calculation);">=</button>
+        <button onclick="calculation+='+';
+        document.getElementById('output').innerHTML = calculation;
+        console.log(calculation);">+</button>
+
+    </p>
+    <p id="row2">
+        <button onclick="calculation+='1';
+        document.getElementById('output').innerHTML = calculation;
+        console.log(calculation);">1</button>
+        <button onclick="calculation+='2';
+        document.getElementById('output').innerHTML = calculation;
+        console.log(calculation);">2</button>
+        <button onclick="calculation+='3';
+        document.getElementById('output').innerHTML = calculation;
+        console.log(calculation);">3</button>
+        <button onclick="calculation+='-';
+        document.getElementById('output').innerHTML = calculation;
+        console.log(calculation);">-</button>
+    </p>
+    <p id="row3">
+        <button onclick="calculation+='4';
+        document.getElementById('output').innerHTML = calculation;
+        console.log(calculation);">4</button>
+        <button onclick="calculation+='5';
+        document.getElementById('output').innerHTML = calculation;
+        console.log(calculation);">5</button>
+        <button onclick="calculation+='6';
+        document.getElementById('output').innerHTML = calculation;
+        console.log(calculation);">6</button>
+        <button onclick="calculation+='*';
+        document.getElementById('output').innerHTML = calculation;
+        console.log(calculation)">x</button>
+    </p>
+    <p id="row4">
+        <button onclick="calculation+='7';
+        document.getElementById('output').innerHTML = calculation;
+        console.log(calculation);">7</button>
+        <button onclick="calculation+='8';
+        document.getElementById('output').innerHTML = calculation;
+        console.log(calculation);">8</button>
+        <button onclick="calculation+='9';
+        document.getElementById('output').innerHTML = calculation;
+        console.log(calculation);">9</button>
+        <button onclick="calculation+='/';
+        document.getElementById('output').innerHTML = calculation;
+        console.log(calculation);">÷</button>
+    </p>
+    <p id="row5">
+        <button onclick="calculation*='0.1';
+        document.getElementById('output').innerHTML = calculation;
+        console.log(calculation);">%</button>
+        <button onclick="calculation+='.';
+        document.getElementById('output').innerHTML = calculation;
+        console.log(calculation);">.</button>
+        <button onclick="calculation+='0';
+        document.getElementById('output').innerHTML = calculation;
+        console.log(calculation);">0</button>
+    </p>
+    <script>
+        let calculation = '';
+        let output = document.querySelector('#output');
+        output.style.backgroundColor = 'black';
+        output.style.color = 'white';    
+    </script>
+</body>
+
+</html>

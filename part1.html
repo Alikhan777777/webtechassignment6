@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+    <link rel="stylesheet" href="styles/part1.css">
+</head>
+<body>
+    <!-- task 1 -->
+    <h1 id="js-header">Java Script</h1> 
+
+    <!-- task 2 -->
+    <div class="container">
+        <p class="text">This is my first Java Script program!</p>
+    </div>
+
+    <!-- task 3 -->
+    <div class="js-container">
+        <div class="buttons">
+            <button onclick="task1();">task 1</button>
+            <button onclick="task2();">task 2</button>
+            <button onclick="changeParagraph();">change paragraph</button>
+            <button onclick="changeBackgroundColor();">change background color</button>
+            <button onclick="changeFontSize();">change font size</button>
+        </div>
+
+        <!-- task 4 -->
+        <div class="list-container">
+            <input type="text" class="item-input" onkeydown="
+                if (event.key === 'Enter') {
+                    const itemInput = document.querySelector('.item-input');
+                    listItems.push(itemInput.value);
+                }">
+            <button onclick="addListItem();">Add List Item</button>
+            <button onclick="removeListItem();">Remove List Item</button>
+            <ul class="list"></ul>
+        </div>
+    </div>
+
+    <!-- task 5 -->
+    <div id="box" style="width:150px; height:150px; background-color:lightblue;"></div>
+
+    <!-- task 6 -->
+    <input type="text" id="text-input" placeholder="Type something:">
+    <p>Some text: <span id="display"></span></p>
+
+    <script src="scripts/part1.js"></script>
+</body>
+</html>
